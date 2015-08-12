@@ -1,0 +1,58 @@
+#MySQL connection
+user: "root"
+pass: ""
+db: "jdbc:mysql://Server:3306/DataBaseName"
+prefix: "vip_"
+
+###Config
+#How often check if VIP of online players has expired (in minutes)
+updateTime: 5
+#Send message to player when player activate VIP?
+ActiveMessageSend: true
+#Broadcast message to all players when player activate VIP?
+PublicActiveMessageSend: true
+#Send message to player when player's VIP expire?
+ExpireMessageSend: true
+#Broadcast message to all players when player's VIP expire?
+PublicExpireMessageSend: true
+
+#VIP information (/vip)
+VIPInfo: "&6VIP features:\n
+&e- Test\n
+&e- Another\n
+&e- Another\n
+&e- Another\n
+&6More information: www.mywebsite.com"
+
+#List of commands to be executed when VIP is activated or deactivated.
+#You have to set/add permissions group!
+#You can use any command you want! That gives you alot of possibilities.
+#Placeholders:
+#- %player% - Name of player that activated VIP
+#- %group% - Selected group
+CommandsActive:
+- "pex user %player% group set %group%"
+
+CommandsDeactive:
+- "pex user %player% group set default"
+
+#Localization messages
+ActiveMessage: "&2You activated your VIP (%group%)!"
+ExpireMessage: "&4Your VIP (%group%) expired!"
+PublicActiveMessage: "&2%player% has just activated (%group%)!"
+PublicExpireMessage: "&4%player%'s VIP (%group%) has just expired!"
+NoPermission: "&4You don't have permission for that!"
+Reload: "&2Config was successfully reloaded!"
+BadCmdUsage: "&2Bad command usage! Usage: %cmd_usage%"
+CodeGenerated: "&2Code was generated:&a %code%!"
+CodesList: "&2List of codes:"
+CodeInfo: "Code: %code%, Group: %group%, Duration: %duration%"
+CodeNotExist: "&2Code %code% doesn't exist!"
+NotVIP: "&4You are not VIP!"
+VIPTime: "&6VIP Time remaining: %time%"
+VIPTimePermanent: "&6Your VIP is permanent!"
+Days: "days"
+Hours: "hours"
+Minutes: "minutes"
+Seconds: "seconds"
+Permanent: "permanent"
